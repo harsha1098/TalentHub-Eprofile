@@ -1,0 +1,91 @@
+{% extends 'account/base.html'%}
+{% load static %}
+
+    {% block content %}
+        <u><h1>Explore The Marketplace</h1><br><br></u>
+        <div class="container-fluid padding">
+                <div class="row padding">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-imd-top" src="{% static 'img/7.jpg' %}" height=284 width=341>
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="{% url 'shop:sublist' cat.0.0 %}">{{cat.0.1}}</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-imd-top" src="{% static 'img/8.jpg' %}" height=284 width=341>
+                                <div class="card-body">
+                                    <h4 class="card-title"><a href="{% url 'shop:sublist' cat.3.0 %}">{{cat.3.1}}</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="card">
+                                    <img class="card-imd-top" src="{% static 'img/9.jpg' %}" height=284 width=341>
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="{% url 'shop:sublist' cat.1.0 %}">{{cat.1.1}}</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="{% static 'img/10.jpg' %}" height=284 width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title"><a href="{% url 'shop:sublist' cat.5.0 %}">{{cat.5.1}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+        </div><br><br>
+        <div class="container-fluid padding">
+                <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="{% static 'img/11.jpg' %}" height=284 width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title"><a href="{% url 'shop:sublist' cat.4.0 %}">{{cat.4.1}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="{% static 'img/12.jpg' %}" height=284 width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title"><a href="{% url 'shop:sublist' cat.2.0 %}">{{cat.2.1}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="{% static 'img/13.jpg' %}" height=284 width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title"><a href="{% url 'shop:sublist' cat.6.0 %}">{{cat.6.1}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="{% static 'img/14.jpg' %}" height=284 width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title"><a href="{% url 'shop:sublist' cat.7.0 %}">{{cat.7.1}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                </div>
+            </div>
+            <footer>
+                <center> <hr class="light">
+                 <img src="{% static 'img/0.jpg' %}">
+                 <br>Privacy|Policy Terms of Services
+                 
+                 <p>444-444-4444</p>
+                 <p>&copy:2019 thetalenthub.com</p>
+                 <p>thetalenthub.com</p></center>
+ </footer>
+{% endblock%}
+</html>
+                                
+            

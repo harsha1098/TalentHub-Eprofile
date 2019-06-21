@@ -1,0 +1,116 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=67, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Page</title>
+</head>
+    
+
+<body>
+    <style>
+        
+        .banner{position: relative;width:100%;}
+        .banner img{width:100%}
+        .heading{color:black;position:absolute;top:40% ;width:100%;font-size:5rem; }
+        section{
+    position: relative;
+    display:flex;
+   
+}
+section .screen:nth-child(1){
+    background-color:white;
+    
+}
+section .screen:nth-child(2){
+    background-color:black;
+    width:50%;
+    
+    color:white;
+}
+
+  
+</style>
+    <div class="container">
+        <div class="row">
+            <div class="banner">
+                <img src="{% static 'img/careers_HD.jpg' %}"alt="error">
+                <h2 class="heading">Don't Just Dream,<br>Do With Us.</h2>
+                </div>
+        </div>
+        
+    
+       <h1><br><br> <center>We Believe In<br>Ideas. Community. Innovation. </center></h1>
+      <center> At TheTalentHub, it’s our mission to grow and cultivate the world’s largest digital marketplace, a place<br> where people can find and purchase any service they need, and build any business they dream. <br>As an employee, your work is inspired by the success of our users and the celebration of your own<br>personal growth. Join us.
+       </center>
+     
+        <br> <br> <br><br>  <section class="split">
+               <div class="screen">
+                    <div class="card">
+                        <div class="imgBx">
+                                <img src= " {% static 'img/photo.jpg' %}" alt="error" width="900" height="300" margin="2">  
+                            </div>
+                            </div>
+                            </div>
+                    
+                            <div class="screen">
+                                    <div class="card">
+                                        <div class="imgBx">
+                                                <br><br><center><h3>Life At TheTalentHub</h3> </center>
+                                          <br>  <center><p> If an exciting challenge is what gets you up in the<br> morning and keeps you up at night, we should talk.<br> Our offices are filled with doers like you. Want <br>coworkers who are as committed, curious, and <br>enthusiastic as you? Join our team.</p></center>
+                                            </div>
+                                            </div>
+                                            </div>
+     <div class="content">                                       </section>
+           <br><h1>TheTalentHub's Terms of Services</h1>
+          <p> Welcome to TheTalentHub's.com<br>
+           <br>Please read the Terms of Service carefully before you start to use the Site. By using the Site, opening an account or by clicking to accept or agree to the Terms of Service when this option is made available to you, you accept and agree to be bound and abide by these Terms of Service and our Privacy Policy, found here, incorporated herein by reference. If you do not want to agree to these Terms of Service or the Privacy Policy, you must not access or use the Site. For more detailed policies surrounding the activity and usage on the Site, please access the designated articles herein.
+          <br><br><p>This Site is offered and available to users who are 13 years of age or older. If you are under 13 you may not use this Site or the TalentHub's services. By using this Site, you represent and warrant that you are of legal age to form a binding contract and meet all of the foregoing eligibility requirements. If you do not meet all of these requirements, you must not access or use the Site.</p>
+        <h1>Overview (Main terms, in a nutshell)</h1>
+          <ul>
+            <li>Only registered users may buy and sell on TheTalentHub. Registration is free.</li>
+           <br><li> Buyers pay in advance to create an order (see Purchasing Section below regarding payment terms).</li>
+            <br> <li>Orders are purchased through the Order button found on a Seller’s Gig page or through a Custom Offer.</li>
+         <br><li>For fees and payments please read the purchasing section here.</li>
+<br><li>Sellers must fulfill their orders, and may not cancel orders on a regular basis or without cause. Cancelling orders will affect Sellers’ reputation and status.</li>
+<br><li>Sellers gain account statuses (Levels) based on their performance and reputation. Advanced levels provide their owners with benefits, including offering services for higher prices through Gig Extras, or selling their Gig in multiples.
+<br><br><li>Users may not offer or accept payments using any method other than placing an order through TheTalentHub.com.</li>
+<br><li>Buyers are granted all rights for the delivered work, unless otherwise specified by the Seller on their Gig page. Note: some Gigs charge additional payments (through Gig Extras) for Commercial Use License. See our “Ownership” and “Commercial Use License” sections below for more information.</li>
+
+            </ol>
+            <h1>Seller Features</h1>
+           <br> TheTalentHub Sellers have access to several exclusive features that help customize the way their services can be offered.
+         <br>  <br><h2> Custom Offer</h2>
+           <ul type="square">
+           
+            
+                  <br> <li >Sellers can also send Custom Offers addressing specific requirements of a Buyer.</li>
+                  <br>  <li>Custom Offers are defined by the Seller with the exact description of the service, the price and the time expected to deliver the service.</li>
+                  <br><li>  Custom Offers are sent from the conversation page.</li>
+                   <br> <li>Services provided through Custom Offers may not violate Fiverr’s Terms of Service.</li>
+                  <br> <li> Project Milestones:</li>
+                       <ul type="circle">
+                          <br> <li> Custom Offers above $100 may include up to three project milestones. Each milestone is paid and delivered separately in accordance with each Custom Offer’s description and timelines.</li>
+                      <br> <li> A milestone is marked as Complete after it is delivered by the Seller and then accepted by the Buyer. A milestone will be automatically marked as complete if no acceptance or request for modification were submitted within 8 days after marked as Delivered, however, in such case the order will be stopped and all further milestones will be cancelled.</li>
+                      <br> <li> Once a milestone is delivered, Buyers may choose to either continue with the order and pay for the next milestone, or to stop the order. Please note that if you choose to stop the order, the current delivered milestone will not be cancelled.</li>
+                </ul>
+                </ul>
+        </div>
+        <footer>
+	<hr>
+              <center>  <img src= "{% static 'img/10.jpg' %} ">
+        <br>Privacy|Policy Terms of Service
+				
+                <p>444-444-4444</p>
+                <p>&copy:2019 thetalenthub.com</p>
+                <p>thetalenthub.com</p>
+                </center>
+</footer>
+</body>
+
+</html>
+{% endblock %}

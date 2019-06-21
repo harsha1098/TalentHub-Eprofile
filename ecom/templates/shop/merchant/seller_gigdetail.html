@@ -1,0 +1,26 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{%  block content %}
+<div class = "row">
+<div class = "col-md-8">
+<div class = "panel panel-default">
+<div class = "panel-body">
+<h3>Gig Title : {{obj.title}}</h3>
+<hr>
+</div>
+</div>
+<div class = "panel panel-default">
+<div class = "panel-heading">
+<h4>About This Gig</h4>
+</div>
+<div class = "panel-body">
+<p><strong>Gig Category </strong>: {{obj.category}}</p>
+<p><strong>Gig Description </strong>: {{obj.description}}</p>
+<p><strong>Gig Price </strong> : ${{obj.price}}</p>
+</div>
+</div>
+<a class="btn btn-primary" href="{% url 'shop:gigupdate' obj.id %}">update</a>
+
+
+
+{% endblock %}

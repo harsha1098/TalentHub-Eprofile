@@ -1,0 +1,86 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(img/mac.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: times new roman;
+}
+h1{
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.col-md-5{
+    background: rgba(0,0,0,0.5);
+    margin-top: 40px;
+    position: "center";
+    box-align: center ;
+}
+.label{
+    font-size: 20px;
+    font-weight: normal;
+    color: white
+}
+.input-group{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.input-group-addon{
+    background: transparent;
+    box-align: center ;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+    color: white;
+}
+.form-control{
+    background: transparent;
+    position: "center";
+    box-align: center ;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid white;
+    padding: 15px;
+    color: white;
+    font-size: 21px;
+}
+input[type="checkbox"]{
+    height: 15px;
+    color:white;
+
+}
+small{
+    font-size: 18px;
+    color: white;
+}
+p{
+    font-size: 18px;
+    color: white;
+}
+.btn-default{
+    border: 1px solid #fff;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    color: #000;
+    z-index: -1;
+    margin-left :145px;
+    
+
+}
+h2{
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}

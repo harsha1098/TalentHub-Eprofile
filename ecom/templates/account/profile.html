@@ -1,0 +1,31 @@
+{% extends 'account/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+    <head>
+        <title>profile</title>
+        <link  href="{% static 'profile.css' %}" rel="stylesheet" type="text/css" >
+        <link href="https://stackpath.bootsrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        </head>
+       
+            <div class="box">
+                <div class="imgBx">
+                    <img src="{% static 'profile_pics/user.jpg' %}" height="500px" width="400" >
+                </div>
+                <ul class="socail-icon">
+                    <li><a class="btn btn-primary" href="{% url 'update_user_profile' %}"><strong>Update</strong></a></li>
+                    {% if user.merchant_profile %}
+                    <li><a class="btn btn-primary"href="{% url 'update_profile' user.merchant_profile.id %}" style="width:115px; height:115px;"><strong>Update seller</strong></a></li>
+                    <li><a class="btn btn-primary"href="{% url 'shop:giglist' %}"><strong>My gigs</strong></a></li>
+                    <li><a class="btn btn-primary"href="{% url 'shop:message_view' %}"><strong>My Messages</strong></a></li>
+                    {% endif %}
+                </ul>
+                <div class="details">
+                    <h3><strong>Username : </strong>{{user.username}}</p></h3>
+                    <h3><strong>Fullname : </strong>{{user.get_full_name}}</p></h3>
+                </div>
+
+            </div>
+
+{% endblock %}

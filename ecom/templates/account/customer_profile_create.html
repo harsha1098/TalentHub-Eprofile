@@ -1,0 +1,65 @@
+{% extends 'account/base.html'%}
+{% load staticfiles %}
+ {% block content %}
+    <head>
+
+        <link href="https://stackpath.bootsrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel=  "stylesheet" type = "text/css" href="{% static  'update.css'%}" >
+    </head>
+   
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5" style="margin-left:330px;">
+                    <h1 class="text-center">Update your profile</h1>
+                    <div class="input group">
+                    <div class="imgBx">
+                            <img src="{% static 'img/0.jpg' %}" height="100px" width="100" style="margin-left:145px;">
+                        </div>
+                    </div>
+
+                    
+                <form method="post" enctype='multipart/form-data'>
+	                {% csrf_token %}
+                    <label class="label control-label">Image</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{profileform.avatar}}
+                    </div>
+                   
+
+                    <label class="label control-label">First name</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{userform.first_name}}
+                    </div>
+                    
+                    <label class="label control-label">Last name</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{userform.last_name}}
+                    </div>
+                    <div class="label control-label">E-mail</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+    					{{userform.email}}
+                    </div>
+					<br>
+                    <div class ="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Save changes</button>
+                    </div>
+                    </div>
+
+                    
+                    
+                    
+                 
+                    
+               
+                
+
+            </div>
+            </div>
+        </div>
+        </form>
+ {% endblock %}

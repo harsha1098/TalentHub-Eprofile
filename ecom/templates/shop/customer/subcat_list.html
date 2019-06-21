@@ -1,0 +1,153 @@
+{% extends 'account/base.html' %}
+
+
+{% load staticfiles %}
+
+{% block content %}
+
+			
+
+
+{% ifequal sub_cat.0 all.0 %}#graphics
+
+<u><h1>Graphics and Design</h1><br><br></u>
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-imd-top" src="{% static 'img/6.jpg'%}" height=284  width=341 >
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="{% url 'shop:gigsellerlist' main_cat.0.0  sub_cat.0.slug %}">{{sub_cat.0}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="img/22.jpg" height=284  width=341 >
+                        <div class="card-body">
+                            <h4 class="card-title">{{sub_cat.1}}</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-imd-top" src="img/23.jpg" height=284  width=341 >
+                            <div class="card-body">
+                                <h4 class="card-title">{{sub_cat.5}}</h4>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                
+                    <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-imd-top" src="img/24.jpg" height=284  width=341 >
+                                <div class="card-body">
+                                    <h4 class="card-title">Book & album covers</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-imd-top" src="img/25.jpg" height=284  width=341 >
+                                <div class="card-body">
+                                    <h4 class="card-title">Photoshop editing</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-imd-top" src="img/26.jpg"  height=284  width=341>
+                                <div class="card-body">
+                                    <h4 class="card-title">Potraits and Caricature</h4>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+</div>
+<footer>
+    <center> <hr class="light">
+     <img src="img/0.jpg">
+     <br>Privacy|Policy Terms of Services
+     
+     <p>444-444-4444</p>
+     <p>&copy:2019 thetalenthub.com</p>
+     <p>thetalenthub.com</p></center>
+</footer>
+{% endifequal %}
+
+
+{%ifequal cat all.1 %}#music
+<h4><a  href="{% url 'shop:gigsellerlist' main_cat.0.0 cat.slug  %}"> {{cat}}</a> </h4>
+
+<u><h1>Music and Audio</h1><br><br></u>
+        <div class="container-fluid padding">
+                <div class="row padding">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-imd-top" src="img/27.jpg" height=284  width=341>
+                            <div class="card-body">
+                                <h4 class="card-title">{{sub_cat.1}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-imd-top" src="img/28.jpg" height=284  width=341>
+                                <div class="card-body">
+                                    <h4 class="card-title">Mixing and mastering</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-imd-top" src="img/29.jpg" height=284  width=341>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Singers-Songwriters</h4>
+                                    </div>
+                                </div>
+                                <br><br>
+                            </div>
+                        
+                            <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="img/30.jpg" height=284  width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Sound Effects</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="img/31.jpg" height=284  width=341>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Producers and composers</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-imd-top" src="img/32.jpg" height=284  width=341 >
+                                        <div class="card-body">
+                                            <h4 class="card-title">Jingles & Drops</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+        </div>
+{% endifequal %}
+
+
+{% ifequal cat all.2 %}#digital marketing
+<h4><a  href="{% url 'shop:gigsellerlist' main_cat.0.0 cat.slug  %}"> {{cat}}</a> </h4>
+{% endifequal %}
+
+{% ifequal cat all.3 %}#writing translation
+<h4><a  href="{% url 'shop:gigsellerlist' main_cat.0.0 cat.slug  %}"> {{cat}}</a> </h4>
+{% endifequal %}
+
+
+
+
+
+{% endblock %}

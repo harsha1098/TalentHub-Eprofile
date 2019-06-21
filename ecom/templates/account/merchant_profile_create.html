@@ -1,0 +1,65 @@
+{% extends 'account/base.html'%}
+{% load staticfiles %}
+ {% block content %}
+    <head>
+
+        <link href="https://stackpath.bootsrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel=  "stylesheet" type = "text/css" href="{% static  'update.css'%}" >
+    </head>
+   
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5" style="margin-left:330px;">
+                    <h1 class="text-center">Update Seller</h1>
+                    <div class="input group">
+                    <div class="imgBx">
+                            <img src="{% static 'img/0.jpg' %}" height="100px" width="100" style="margin-left:145px;">
+                        </div>
+                    </div>
+
+                    
+                <form method="post" enctype='multipart/form-data'>
+	                {% csrf_token %}
+                    <label class="label control-label">Category</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{form.category}}
+                    </div>
+                   
+
+                    <label class="label control-label">Education</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{form.education}}
+                    </div>
+                    
+                    <label class="label control-label">Skill</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+                        {{form.skill}}
+                    </div>
+                    <div class="label control-label">Location</label>
+                    <div class="input group">
+                        <span class="input-group-addon"><span class=glyphicon glyphicon-user></span></span>
+    					{{form.location}}
+                    </div>
+					<br>
+                    <div class ="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Save changes</button>
+                    </div>
+                    </div>
+
+                    
+                    
+                    
+                 
+                    
+               
+                
+
+            </div>
+            </div>
+        </div>
+        </form>
+ {% endblock %}

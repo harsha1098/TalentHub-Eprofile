@@ -1,0 +1,39 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 style="margin bottom:30px;">Messages</h1>
+<div class="panel panel-default">
+<table class="table table-bordered table-striped">
+<thead class = "bg-success">
+<tr>
+<th>
+<th>Message Title</th>
+<th>Gig Title</th>
+<th>Message</th>
+</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% if user.merchant_profile %}
+
+	{% for message in msg_obj %}
+	<tr>
+		<td>{{forloop.counter }}</td>
+		<td>{{message.title}}</td>
+		<td>{{message.gig.title}}</td>
+		<td>{{message.msg}}</td>
+		
+	{% endfor %}
+</tbody>
+</table>
+</div>
+	{% endif %}
+{% endblock %}
+
+
+
+
+

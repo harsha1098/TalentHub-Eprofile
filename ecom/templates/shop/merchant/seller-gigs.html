@@ -1,0 +1,34 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% block content %}
+<h1 style="margin bottom:30px;">My Gigs</h1>
+<div class="panel panel-default">
+<table class="table table-bordered table-striped">
+<thead class = "bg-success">
+<tr>
+<th>
+<th>Gig Category</th>
+<th>Gig Title</th>
+<th>Gig Description</th>
+<th>Price ($)</th>
+<th></th>
+</th>
+</tr>
+</thead>
+<tbody>
+{% for gigs in object_list %}
+<tr>
+<td>{{forloop.counter}}</td>
+<td>{{gigs.category}}</td>
+<td><a href="{% url 'shop:seller_gigdetail' gigs.id %}">{{gigs.title}}</a></td>
+<td>{{gigs.description}}</td>
+<td>{{gigs.price}}</td>
+<td><a class="btn btn-danger"   href="{% url 'shop:gigdelete' gigs.id %}">Delete</a></td>
+</tr>
+
+
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'account/base.html' %}
+{%  block content %}
+
+<h2>About This Gig</h2><hr>
+<p><strong>Gig Title </strong> : {{gig_obj.title}}</p>
+<p><strong>Gig Category </strong> : {{gig_obj.category}}</p>
+<p><strong>Gig Description </strong> : {{gig_obj.description}}</p>
+<p><strong>Gig Price </strong> : ${{gig_obj.price}}+$2</p>
+<marquee><strong></strong>$2 is our Service Charge</strong></marquee>
+{% if user.is_authenticated %}
+<a class="btn btn-primary" href="">contact seller</a>
+{% else %}
+<p>login to contact seller</p>
+{% endif %}<hr><hr>
+
+<form action="{% url 'shop:charge' gig_obj.id amt %}" method="post">
+    {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="A Django Charge"
+            data-amount={{amt}}
+            data-locale="auto"></script>
+
+
+{% endblock %}
